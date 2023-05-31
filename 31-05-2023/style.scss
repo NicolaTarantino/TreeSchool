@@ -1,0 +1,78 @@
+//palette
+$background: #f9e0bb;
+$primary-color: #c38154;
+$secondary-color: #ffc26f;
+$active-color: #884a39;
+
+//font
+$font: Arial, Helvetica, sans-serif;
+
+//position
+@mixin flex_end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 2em;
+  padding: 1em;
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 2em;
+}
+
+//media
+$tablet: 768px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(231, 220, 220);
+  font-family: $font;
+  @include tablet {
+    background-color: $background;
+  }
+  nav {
+    background-color: $secondary-color;
+    ul {
+      @include flex_end();
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+  main {
+    h2 {
+      text-align: center;
+      padding: 1em;
+    }
+    .articoli {
+      @include flex(column);
+    }
+    .finale {
+      padding: 2em;
+    }
+  }
+  footer {
+    background-color: $active-color;
+    ul {
+      @include flex_end();
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}

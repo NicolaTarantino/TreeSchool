@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  /* margin: 0 auto; */
+  max-width: 980px;
+  grid-area: header;
+}
+
+nav {
+  background-color: #000;
+  padding: 0.5em;
+  grid-area: nav;
+  position: sticky;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  grid-area: article;
+}
+
+article h1 {
+  padding: 20px 0;
+}
+
+article p:first-of-type {
+  margin-top: 0;
+}
+
+.feature {
+  float: left;
+  margin-right: 15px;
+}
+
+p {
+  margin-top: 10px;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+aside h2 {
+  padding: 20px 0;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+}
+
+.container {
+  grid-area: card;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.container h2 {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 5px white;
+  font-size: 3rem;
+  padding-top: 30px;
+}
+
+.card ul {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.tags li {
+  list-style-type: none;
+  background-color: grey;
+  color: white;
+  padding: 4px;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.card:first-of-type {
+  background: linear-gradient(
+    180deg,
+    rgba(181, 34, 245, 1) 0%,
+    rgba(110, 223, 255, 1) 100%
+  );
+}
+
+.card {
+  box-shadow: 1px 1px 10px grey;
+  border-radius: 15px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  font-size: 90%;
+}
+
+.grid {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "article sidebar"
+    "card card"
+    "footer footer";
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  width: 200px;
+}
